@@ -78,7 +78,7 @@ def index():
 
 # Función para cargar los pedidos confirmados desde el archivo de texto
 def cargar_pedidos_confirmados():
-    with open('pedidos_confirmados.txt', 'r') as file:
+    with open('/pedidos_confirmados.txt', 'r') as file:
         pedidos = [line.strip().split(',') for line in file.readlines()]
     return pedidos
 
