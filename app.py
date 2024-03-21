@@ -69,7 +69,7 @@ def index():
         fecha_confirmacion = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         if confirmado:
             # Guardar los datos del pedido confirmado
-            with open("pedidos_confirmados.txt", "a") as file:
+            with open("/pedidos_confirmados.txt", "a") as file:
                 file.write(f"Fecha de confirmación: {fecha_confirmacion}, Largo total: {largo_total}, Altura: {alturas[altura]}, Color: {color_pintura}\n")
         img_bytes = dibujar_rejas(cantidad_rejas, altura) # Dibujar el diseño de las rejas y servirlo como una imagen
         return render_template('index.html', img_bytes=img_bytes, cantidad_rejas=cantidad_rejas, cantidad_postes=cantidad_postes, cantidad_tornillos=cantidad_tornillos, cantidad_fijadores=cantidad_fijadores, color_pintura=color_pintura)
