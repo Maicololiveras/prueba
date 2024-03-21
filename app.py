@@ -84,7 +84,7 @@ def cargar_pedidos_confirmados():
 
 
 # Definir ruta para ver pedidos confirmados
-@app.route('./pedidos_confirmados')
+@app.route('/pedidos_confirmados')
 def ver_pedidos_confirmados():
     # Cargar los pedidos confirmados
     pedidos = cargar_pedidos_confirmados()
